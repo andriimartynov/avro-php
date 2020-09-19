@@ -36,42 +36,42 @@ class AvroDataIO
   /**
    * @var int used in file header
    */
-  const VERSION = 1;
+  private const VERSION = 1;
 
   /**
    * @var int count of bytes in synchronization marker
    */
-  const SYNC_SIZE = 16;
+  public const SYNC_SIZE = 16;
 
   /**
    * @var int   count of items per block, arbitrarily set to 4000 * SYNC_SIZE
    * @todo make this value configurable
    */
-  const SYNC_INTERVAL = 64000;
+  public const SYNC_INTERVAL = 64000;
 
   /**
    * @var string map key for datafile metadata codec value
    */
-  const METADATA_CODEC_ATTR = 'avro.codec';
+  public const METADATA_CODEC_ATTR = 'avro.codec';
 
   /**
    * @var string map key for datafile metadata schema value
    */
-  const METADATA_SCHEMA_ATTR = 'avro.schema';
+  public const METADATA_SCHEMA_ATTR = 'avro.schema';
   /**
    * @var string JSON for datafile metadata schema
    */
-  const METADATA_SCHEMA_JSON = '{"type":"map","values":"bytes"}';
+  public const METADATA_SCHEMA_JSON = '{"type":"map","values":"bytes"}';
 
   /**
    * @var string codec value for NULL codec
    */
-  const NULL_CODEC = 'null';
+  public const NULL_CODEC = 'null';
 
   /**
    * @var string codec value for deflate codec
    */
-  const DEFLATE_CODEC = 'deflate';
+  public const DEFLATE_CODEC = 'deflate';
 
   /**
    * @var array array of valid codec names

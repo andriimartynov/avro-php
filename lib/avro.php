@@ -55,15 +55,15 @@ class Avro
    * @var string version number of Avro specification to which
    *             this implemenation complies
    */
-  const SPEC_VERSION  = '1.3.3';
+  public const SPEC_VERSION  = '1.3.3';
 
   /**#@+
    * Constant to enumerate endianness.
    * @access private
    * @var int
    */
-  const BIG_ENDIAN    = 0x00;
-  const LITTLE_ENDIAN = 0x01;
+  private const BIG_ENDIAN    = 0x00;
+  private const LITTLE_ENDIAN = 0x01;
   /**#@-*/
 
   /**
@@ -77,8 +77,8 @@ class Avro
    * Constant to enumerate biginteger handling mode.
    * GMP is used, if available, on 32-bit platforms.
    */
-  const PHP_BIGINTEGER_MODE = 0x00;
-  const GMP_BIGINTEGER_MODE = 0x01;
+  private const PHP_BIGINTEGER_MODE = 0x00;
+  private const GMP_BIGINTEGER_MODE = 0x01;
   /**#@-*/
 
   /**

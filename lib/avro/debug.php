@@ -31,15 +31,15 @@ class AvroDebug
   /**
    * @var int high debug level
    */
-  const DEBUG5 = 5;
+  private const DEBUG5 = 5;
   /**
    * @var int low debug level
    */
-  const DEBUG1 = 1;
+  private const DEBUG1 = 1;
   /**
    * @var int current debug level
    */
-  const DEBUG_LEVEL = self::DEBUG1;
+  private const DEBUG_LEVEL = self::DEBUG1;
 
   /**
    * @var int $debug_level
