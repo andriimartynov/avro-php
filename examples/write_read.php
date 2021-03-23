@@ -19,6 +19,7 @@
  */
 
 require_once('../lib/avro.php');
+require_once('reader.php');
 
 // Write and read a data file
 
@@ -67,7 +68,7 @@ $binary_string = $io->string();
 
 // Load the string data string
 $read_io = new AvroStringIO($binary_string);
-$data_reader = new AvroDataIOReader($read_io, new AvroIODatumReader());
+$data_reader = new AvroDataIOReader($read_io, new AvroIOCustomDatumReader());
 echo "from binary string:\n";
 foreach ($data_reader->data() as $datum)
   echo var_export($datum, true) . "\n";
@@ -86,9 +87,11 @@ from binary string:
 array (
   'member_id' => 1392,
   'member_name' => 'Jose',
+  'record_full_name' => 'member'
 )
 array (
   'member_id' => 1642,
   'member_name' => 'Maria',
+  'record_full_name' => 'member'
 )
 */

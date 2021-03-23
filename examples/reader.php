@@ -318,12 +318,13 @@ class AvroIOCustomDatumReader
         foreach ($writers_schema->fields() as $writers_field)
         {
             $type = $writers_field->type();
-            if (isset($readers_fields[$writers_field->name()]))
+            if (isset($readers_fields[$writers_field->name()])) {
                 $record[$writers_field->name()]
                     = $this->read_data($type,
                     $readers_fields[$writers_field->name()]->type(),
                     $decoder);
-            else
+                $record['record_full_name'] = $readers_schema->fullname();
+            } else
                 $this->skip_data($type, $decoder);
         }
         // Fill in default values
